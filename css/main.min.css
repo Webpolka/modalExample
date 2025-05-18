@@ -667,12 +667,15 @@ sup {
 }
 .modal-grid_button .modalBtn-spaceBetween {
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .modal-grid_button .modalBtn-spaceBetween_top {
   width: 100%;
+  right: 0;
+  left: 0;
   position: relative;
   z-index: 5;
   padding-left: 5px;
@@ -695,6 +698,8 @@ sup {
 }
 .modal-grid_button .modalBtn-spaceBetween_bottom {
   width: 100%;
+  right: 0;
+  left: 0;
   position: relative;
   z-index: 5;
   display: flex;
