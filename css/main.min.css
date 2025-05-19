@@ -317,6 +317,7 @@ sup {
   .modal {
     max-height: 100vh;
     overflow-y: auto;
+      overflow-x: hidden;
   }
 }
 .modal:before {
