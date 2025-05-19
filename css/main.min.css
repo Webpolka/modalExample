@@ -323,7 +323,7 @@ sup {
 .modal:before {
   position: absolute;
   content: "";
-  top: 55px;
+  top: 130px;
   left: 0;
   width: 100%;
   min-height: 100px;
@@ -335,18 +335,23 @@ sup {
 }
 @media (max-width: 768px) {
   .modal:before {
-    top: 45px;
+    top: 120px;
   }
 }
 @media (max-width: 576px) {
   .modal:before {
-    top: 35px;
+    top: 120px;
+  }
+}
+@media (max-width: 375px) {
+  .modal:before {
+    top: 112px;
   }
 }
 .modal:after {
   position: absolute;
   content: "";
-  top: -60px;
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
   min-width: 50%;
@@ -361,13 +366,14 @@ sup {
   margin-top: 100px;
   margin-bottom: 100px;
   position: relative;
-  padding: 40px 30px;
+  padding: 42px 30px;
   border-radius: 8px;
   background-color: #023875;
 }
 @media (max-width: 500px) {
   .modal-tile {
-    padding: 30px 20px;
+    padding-top: 35px;
+    padding-bottom: 25px;
   }
 }
 .modal-close {
@@ -392,9 +398,9 @@ sup {
     padding: 8px;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 420px) {
   .modal-close {
-    top: 15px;
+    padding: 6px;
   }
 }
 .modal-close:hover {
@@ -406,7 +412,7 @@ sup {
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
-  width: 420px;
+  width: 400px;
   height: 75px;
   background-image: url("../images/title-bg.png");
   background-repeat: no-repeat;
@@ -415,14 +421,25 @@ sup {
 }
 @media (max-width: 500px) {
   .modal-header {
-    width: 365px;
+    width: 350px;
     height: 60px;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 440px) {
   .modal-header {
-    width: 315px;
+    width: 300px;
     height: 50px;
+    top: -16px;
+  }
+}
+@media (max-width: 390px) {
+  .modal-header {
+    width: 260px;
+  }
+}
+@media (max-width: 350px) {
+  .modal-header {
+    width: 220px;
   }
 }
 .modal-header h3 {
@@ -440,7 +457,19 @@ sup {
     font-size: 28px;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 440px) {
+  .modal-header h3 {
+    font-size: 24px;
+    top: 6px;
+  }
+}
+@media (max-width: 390px) {
+  .modal-header h3 {
+    top: 8px;
+    font-size: 24px;
+  }
+}
+@media (max-width: 350px) {
   .modal-header h3 {
     top: 8px;
     font-size: 22px;
@@ -470,13 +499,13 @@ sup {
 }
 @media (max-width: 768px) {
   .modal-grid {
-    padding-top: 25px;
+    padding-top: 40px;
     gap: 15px;
   }
 }
 @media (max-width: 375px) {
   .modal-grid {
-    padding-top: 15px;
+    padding-top: 35px;
     gap: 10px;
   }
 }
