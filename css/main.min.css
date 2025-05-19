@@ -1000,6 +1000,7 @@ sup {
 }
 .modal-grid_tiles .tiles .tile-goldpack_bottomline {
   display: block;
+  	width: 100%;
   position: relative;
   z-index: 5;
   display: flex;
