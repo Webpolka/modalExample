@@ -1065,7 +1065,56 @@ sup {
 }
 
 /* ----------------------------------------------------------------------------------------------------------------------
-ПЕЧАТЬ ТЕКСТОМ
+ПЕЧАТЬ С ТЕКСТОМ ПОСРЕДИНЕ
+-----------------------------------------------------------------------------------------------------------------------*/
+.stamp-half {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.stamp-half img {
+  width: 100%;
+  height: auto;
+  transform: rotate(-30deg) scale(0.8);
+}
+.stamp-half .stamp-half_middle {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-size: 1.8rem;
+  line-height: 125%;
+  color: var(--color-white);
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 768px) {
+  .stamp-half .stamp-half_middle {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 576px) {
+  .stamp-half .stamp-half_middle {
+    font-size: 1.9rem;
+  }
+}
+@media (max-width: 390px) {
+  .stamp-half .stamp-half_middle {
+    font-size: 1.7rem;
+  }
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------
+ПЕЧАТЬ ПОЛНОСТЬЮ С ТЕКСТОМ
 -----------------------------------------------------------------------------------------------------------------------*/
 .stamp-text {
   position: absolute;
@@ -1074,7 +1123,7 @@ sup {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.3);
-  z-index: 2;
+  z-index: 10;
 }
 .stamp-text-inner {
   --size: 160px;
@@ -1101,23 +1150,23 @@ sup {
 }
 .stamp-text-inner .stamp-top-word {
   position: absolute;
-  top: 36px;
+  top: 30px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 1.4rem;
-  font-weight: bold;
+  font-size: 1.1rem;
+  font-weight: normal;
   color: var(--color-white);
   transition: all 0.3s ease-in-out;
 }
 @media (max-width: 768px) {
   .stamp-text-inner .stamp-top-word {
-    top: 32px;
+    top: 26px;
     font-size: 1.1rem;
   }
 }
 @media (max-width: 576px) {
   .stamp-text-inner .stamp-top-word {
-    top: 27px;
+    top: 23px;
     font-size: 0.9rem;
   }
 }
@@ -1127,12 +1176,12 @@ sup {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2.1rem;
-  line-height: 120%;
+  font-size: 1.8rem;
+  line-height: 125%;
   color: var(--color-white);
   transition: all 0.3s ease-in-out;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
 }
 @media (max-width: 768px) {
   .stamp-text-inner .stamp-middle-word {
@@ -1147,22 +1196,23 @@ sup {
 .stamp-text-inner .stamp-bottom-word {
   display: block;
   position: absolute;
-  bottom: 36px;
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 1.4rem;
+  font-size: 1.1rem;
+  font-weight: normal;
   color: var(--color-white);
   transition: all 0.3s ease-in-out;
 }
 @media (max-width: 768px) {
   .stamp-text-inner .stamp-bottom-word {
-    bottom: 32px;
+    bottom: 26px;
     font-size: 1.1rem;
   }
 }
 @media (max-width: 576px) {
   .stamp-text-inner .stamp-bottom-word {
-    bottom: 27px;
+    bottom: 23px;
     font-size: 0.9rem;
   }
 }
@@ -1188,6 +1238,11 @@ sup {
   width: 100%;
   height: auto;
   transform: rotate(-30deg) scale(0.8);
+}
+@media (max-width: 576px) {
+  .stamp-image img {
+    transform: rotate(-30deg) scale(1.5) !important;
+  }
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------
